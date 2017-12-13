@@ -32,17 +32,19 @@ BONUS: Instead of using a for loop, try searching about the use of the jQuery .e
         ];
         // 1. Create code that "grabs" the div with the matching id (#drink-options);
         // ...
-        var drink = document.getElementById("#drink-options");
-        // ...
-        // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
-        // HINT: You will need to use each of the following methods: createElement, innerHTML, appendChild
-        // ...
+        // This line of JavaScript "grabs" the main div on the page ("#drink-options");
+        var drink = document.getElementById("drink-options");
+        // We then use a for loop to iterate through all the drinks in drinkList.
+        // With each iteration, we perform a series of code operations each time.
         for (var i = 0; i < drinkList.length; i++) {
+            // For each drink in the array, we create a new placeholder div.
+            // This placeholder will get overwritten with each iteration of the loop.
             var drinkDiv = document.createElement("div");
+            // We then assign the the value of this placeholder div to be the text in the array.
             drinkDiv.innerHTML = drinkList[i];
-            drink.appendChild(newDrinkDiv);
+            // We then add the placeholder div to the our main div on the page ("#drink-options")
+            drink.appendChild(drinkDiv);
         }
-        // ...
     </script>
 </body>
 
